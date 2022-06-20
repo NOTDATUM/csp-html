@@ -1,0 +1,127 @@
+
+<!-- saved from url=(0054)https://www.imdb.com/title/tt1475582/episodes?season=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></head><body marginwidth="0" marginheight="0" data-new-gr-c-s-check-loaded="14.1017.0" data-gr-ext-installed=""><style>body{background:transparent;}</style><script type="data-doubleclick" src="./blank_pixel._V137875076_.gif"></script> <script>document.defaultAd = {h:250,w:300}; document.ad = document.defaultAd;</script>
+<script id="video-event-handlers">
+ (function(window, document) {
+ let SLOT_NAME = 'top_rhs';
+ let videoTargetMap = new Map(); 
+ let validPlayIndicatorEvents = ['loadstart', 'play'];
+
+ function makeId() {
+ return Math.random().toString(36).substr(2, 16);
+ }
+
+ function handleVideoEvent(event) {
+ let videoTarget = event.target;
+ let eventType = event.type;
+ let timestamp = Date.now();
+
+ if (videoTarget.nodeName !== 'VIDEO' || videoTarget.loop) {
+ return;
+ }
+
+ if (!videoTargetMap.has(videoTarget)) {
+ let id = makeId();
+ videoTargetMap.set(videoTarget, {
+ id: id
+ });
+ videoTarget.id = id;
+ }
+
+ let videoTargetEventMap = videoTargetMap.get(videoTarget);
+ videoTargetEventMap[eventType] = timestamp;
+
+ if (eventType === 'ended') {
+ let firedEvents = Object.keys(videoTargetEventMap);
+ let hasMatchingPlayEvent = firedEvents.some(function(evt) {
+ return validPlayIndicatorEvents.includes(evt);
+ });
+ if (!hasMatchingPlayEvent) return;
+ }
+
+ let evt = {
+ type: eventType,
+ dispatcher: 'video-handler',
+ documentAdString: JSON.stringify(document.ad),
+ slotName: SLOT_NAME,
+ targetElementId: videoTargetEventMap.id,
+ timestamp: timestamp
+ };
+
+ parent.postMessage(evt, parent.origin);
+ }
+
+ document.addEventListener('loadstart', handleVideoEvent, true);
+ document.addEventListener('play', handleVideoEvent, true);
+ document.addEventListener('pause', handleVideoEvent, true);
+ document.addEventListener('ended', handleVideoEvent, true);
+ })(window, document);
+</script>
+ <!-- aid : 3671568720302 : cid : 8190573510602 : template : IMDb Slot Collapser Desktop-1.21 --><!-- [METADATA_START] {
+ "creativeId" : "8190573510602"
+ 
+ , "creativeHeight": 0 
+ , "creativeWidth": 0 
+ 
+ 
+ } [METADATA_END] --><script>document.ad={aid:"3671568720302",cid:"8190573510602",w:"0",h:"0"};</script>
+<script src="./csmv5.js.다운로드"></script>
+<script type="text/javascript">
+ var amzncsm = amzncsm || {}; amzncsm.instrURL = "https://aax-eu.amazon-adsystem.com/x/px/IrqisFR3H-Znll2MixhvJskAAAGBgcNRrwMAAADKAbKhZKk/";
+ if(typeof amzncsm.rmR === "function") {
+ amzncsm.rmR(amzncsm.instrURL, window, []);
+ }
+</script>
+
+ <div id="top_rhs_webbug" style="display:none;">
+
+<script>
+ 
+ var ad_utils = ad_utils || window.top.ad_utils;
+
+ var csmMetrics = window.top.ue;
+
+ function fireImpression(isBtrCompliant) {
+
+ const impressionPixels = ['https://aax-eu.amazon-adsystem.com/e/loi/imp?b=IrqisFR3H-Znll2MixhvJskAAAGBgcNRrwMAAADKAbKhZKk'];
+
+ if (ad_utils && ad_utils.adsBtrUtils) {
+ ad_utils.adsBtrUtils.createImpressionPixels(impressionPixels,
+ document.body,
+ isBtrCompliant,
+ 'TOP_RHS');
+ }
+
+ }
+
+ function btrEvaluationCallback() {
+ if (ad_utils) {
+
+
+
+ if (csmMetrics && typeof csmMetrics.count === 'function') {
+ csmMetrics.count('1PimpressionPixelFiredWithBTR', 0);
+ csmMetrics.count('top_rhs_1PimpressionPixelFiredBTR', 0);
+ }
+ }
+ }
+
+ if (document.readyState === 'complete') {
+ btrEvaluationCallback();
+ } else {
+ window.addEventListener('load', btrEvaluationCallback);
+ }
+</script>
+<script>
+ var csmMetrics = window.top.ue;
+ if (csmMetrics && typeof csmMetrics.count === 'function') {
+ csmMetrics.count('impressionPixelFired', 0);
+ csmMetrics.count('top_rhs_impressionPixelFired', 0);
+ }
+</script>
+
+ <img src="./imp(4)" border="0" height="1" width="1" alt="">
+
+ </div>
+
+<script defer="">parent.window.top.ad_utils.ad_table.top_rhs.fired=true;</script><script>document.close()</script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
